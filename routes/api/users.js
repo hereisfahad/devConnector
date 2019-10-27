@@ -4,7 +4,7 @@ const gravatar = require("gravatar");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const config = require("config");
-const { check, validationResult } = require("express-validator/check");
+const { check, validationResult } = require('express-validator/check');
 
 const User = require("../../models/User"); //UserSchema exported as Users = mongoose.model('user', UserSchema);
 
@@ -52,7 +52,6 @@ router.post(
       await user.save();
       //res.send(user);
 
-      //payload with user id
       const payload = {
         user: {
           id: user.id
